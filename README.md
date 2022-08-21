@@ -71,12 +71,11 @@ $ terraform validate
 $ terraform plan 
 # Apply to create resources
 $ terraform apply --auto-approve
+##  Destroy Infrastructure  
+$ terraform destroy --auto-approve
 ```
 
 ```sh
-##  Destroy Infrastructure  
-$ terraform destroy --auto-approve
-
 ## create the kubeconfig file  
 $ mkdir .kube/ 
 $ vi .kube/config
