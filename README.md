@@ -77,8 +77,9 @@ $ terraform destroy --auto-approve
 
 ```sh
 ## create the kubeconfig file  
-$ mkdir .kube/ 
-$ vi .kube/config
+$ mkdir ~/.kube/ 
+$ vi ~/.kube/config
+## Copy the apiserver key and paste in the config file
 $ kubectl get pod
 $ #!/bin/bash 
 $ sh iam-authenticator.sh 
