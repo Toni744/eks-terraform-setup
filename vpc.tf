@@ -10,7 +10,7 @@ resource "aws_vpc" "demo" {
   cidr_block = "10.0.0.0/16"
 
   tags = {
-    "Name" =  "eks-landmark-node",
+    "Name" =  "eks-ACADA-node",
     "kubernetes.io/cluster/${var.cluster-name}" = "shared",
   }
 }
@@ -23,7 +23,7 @@ resource "aws_subnet" "demo" {
   vpc_id                  = aws_vpc.demo.id
 
   tags = {
-    "Name" =  "eks-landmark-node",
+    "Name" =  "eks-ACADA-node",
     "kubernetes.io/cluster/${var.cluster-name}" = "shared",
   }
 }
@@ -50,3 +50,4 @@ resource "aws_route_table_association" "demo" {
 
   subnet_id      = aws_subnet.demo.*.id[count.index]
   route_table_id = aws_route_table.demo.id
+}
