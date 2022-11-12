@@ -79,7 +79,7 @@ $ terraform destroy --auto-approve
 ## create the kubeconfig file  
 $ mkdir ~/.kube/ 
 $ vi ~/.kube/config
-## Copy the apiserver key and paste in the config file
+## Copy the apiserver key and paste in the config file (from apiserver to eks-acada)
 $ kubectl get pod
 $ #!/bin/bash 
 $ sh iam-authenticator.sh 
